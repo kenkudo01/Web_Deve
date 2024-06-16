@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani - form</title>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <script src="Style.css" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <h1><span>A</span>nifo</h1>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="Genres.html">Genres</a></li>
+                    <li><a href="#" class="active">form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <div class="main__pagetitle">
+            <hr>
+            <h1>Contact</h1>
+        </div>
+        <div class="main__content">
+            <form action="mailto:e6ntcl@inf.elte.hu" method="post" enctype="text/plain">
+                <fieldset>
+                    <label for="name"><strong>Name</strong></label><br>
+                    <input type="text" name="name" id="name" placeholder="Your name" size="60"><br>
+                </fieldset>
+                <fieldset>
+                    <label for="email"><strong>E-mail address</strong></label><br>
+                    <input type="email" name="email" id="email" placeholder="Your email" size="60"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Reason for Contact</legend>
+                    <input type="radio" name="reason" id="question" value="question">
+                    <label for="question">Question</label>
+                    <input type="radio" name="reason" id="feedback" value="feedback">
+                    <label for="feedback">Feedback</label>
+                    <input type="radio" name="reason" id="support" value="support">
+                    <label for="support">Support</label>
+                    <input type="radio" name="reason" id="other" value="other">
+                    <label for="other">Other</label>
+                </fieldset>
+                <fieldset>
+                    <label for="message"><strong>Message</strong></label><br>
+                    <textarea cols="60" rows="10" name="message" id="message" placeholder="Your message"></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="checkbox" name="newsletter" id="newsletter" value="subscribe">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </fieldset>
+                <fieldset class="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+        <hr>
+
+        <p>Contaact me</p>
+        <p>kenkudo4649@gmail.com</p>
+
+    </footer>
+</body>
+</html>

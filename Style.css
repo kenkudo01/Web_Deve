@@ -1,0 +1,587 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+img, video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+header .header-wrapper {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    header .header-wrapper {
+        padding: 10px 20px;
+    }
+}
+
+header .logo {
+    font-size: 2.4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    header .logo {
+        font-size: 1.6em;
+    }
+}
+
+.active {
+    text-decoration: underline;
+}
+
+header .header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* ここでli要素間にスペースを追加 */
+}
+
+header .header-nav ul li a {
+  font-size: 1.6em;
+  color: white;
+  transition: color 0.3s; /* スムーズな色の変化を追加 */
+}
+
+header .header-nav ul li a:hover {
+  color: gray; /* ホバー時にフォントカラーをグレーに変更 */
+}
+
+header .header-nav ul li:hover {
+  color: gray;
+}
+
+header span{
+  color: rgb(175, 17, 17);
+}
+
+.main_title_top{
+  background-image: url(ATask/background-3386570_1280.jpg);
+
+}
+
+
+/* Table Styling */
+/* Table Styling */
+.main_schedule {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.main_schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: auto;
+}
+
+.main_schedule caption {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.main_schedule details summary {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .main_schedule details summary {
+      font-size: 1em; /* モバイルデバイスでフォントサイズを小さく設定 */
+  }
+}
+
+.main_schedule details p {
+  font-size: 1em;
+  margin-top: 5px;
+  color: white;
+}
+
+.main_schedule thead {
+  background-color: #444;
+}
+
+.main_schedule thead th {
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+  border: 1px solid #666;
+}
+
+.main_schedule tbody tr:nth-child(even) {
+  background-color: #333;
+}
+
+.main_schedule tbody tr:nth-child(odd) {
+  background-color: #222;
+}
+
+.main_schedule tbody td {
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid #666;
+  color: white;
+}
+
+.main_schedule tbody tr:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main_schedule table,
+  .main_schedule thead,
+  .main_schedule tbody,
+  .main_schedule th,
+  .main_schedule td,
+  .main_schedule tr {
+      display: block;
+  }
+
+  .main_schedule thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .main_schedule tr {
+      margin: 0 0 20px 0;
+  }
+
+  .main_schedule td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+  }
+
+  .main_schedule td:before {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      transform: translateY(-50%);
+      font-weight: bold;
+      color: #999;
+  }
+
+  .main_schedule td:nth-of-type(1):before { content: "Title"; }
+  .main_schedule td:nth-of-type(2):before { content: "Netflix"; }
+  .main_schedule td:nth-of-type(3):before { content: "Amazon Prime"; }
+  .main_schedule td:nth-of-type(4):before { content: "Hulu"; }
+  .main_schedule td:nth-of-type(5):before { content: "Tubi"; }
+}
+
+
+
+
+/*-------------slider----------*/
+
+.sliderArea, .sersch {
+  flex: 1;
+  padding: 0 25px;
+}
+
+.sliderArea {
+  max-width: 50%;
+}
+
+.sersch {
+  max-width: 50%;
+  padding-top: 20px;
+  padding: 0 25px;
+}
+
+.slider ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slider li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* form*/
+
+/* Form Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #000; /* 背景色を黒に変更 */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white; /* テキスト色を白に変更 */
+}
+
+/* Form Title */
+.main__pagetitle h1 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Form Description */
+.main__content p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Fieldsets */
+form fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Inputs and Textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #fff; /* 入力フィールドの背景色を白に変更 */
+  color: #000; /* 入力テキストの色を黒に変更 */
+}
+
+/* Textarea */
+form textarea {
+  resize: vertical;
+}
+
+/* Radio Buttons and Checkboxes */
+form .radio-group,
+form .checkbox-group {
+  display: flex;
+  flex-direction: row; /* ラジオボタンとチェックボックスを横一列に表示 */
+  margin-bottom: 15px;
+}
+
+form .radio-group label,
+form .checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px; /* 各ラベル間にスペースを追加 */
+  font-weight: normal;
+  color: white;
+}
+
+form .radio-group input,
+form .checkbox-group input {
+  margin-right: 10px;
+}
+
+/* Buttons */
+form .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .buttons input[type="submit"],
+form .buttons input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Submit Button */
+form .buttons input[type="submit"] {
+  background-color: #d3d3d3; /* サブミットボタンの薄いグレーの背景色 */
+  color: #000; /* サブミットボタンの文字色を黒に設定 */
+}
+
+form .buttons input[type="submit"]:hover {
+  background-color: #a9a9a9; /* サブミットボタンのホバー時の濃いグレーの背景色 */
+  color: #fff; /* サブミットボタンのホバー時の文字色を白に設定 */
+}
+
+/* Reset Button */
+form .buttons input[type="reset"] {
+  background-color: #d3d3d3; /* リセットボタンの薄いグレーの背景色 */
+  color: #000; /* リセットボタンの文字色を黒に設定 */
+}
+
+form .buttons input[type="reset"]:hover {
+  background-color: #a9a9a9; /* リセットボタンのホバー時の濃いグレーの背景色 */
+  color: #fff; /* リセットボタンのホバー時の文字色を白に設定 */
+}
+/* ranking */
+
+.ranking h2{
+  color:  white;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.top1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid #000;
+  padding: 20px;
+  color: white;
+  padding-top: 75px;
+}
+
+.top1 img {
+  width: 45%;
+  height: 45%;
+  margin-right: 20px;
+  background-color: #ccc;
+}
+
+.top1 h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.top1 p {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.top1 a.more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+hr.mid {
+  height: 1px;
+  background-color: #000;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.top1 table {
+  border-collapse: collapse;
+}
+
+.top1 td, th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.2;
+  border: none;
+}
+
+.top2 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row-reverse;
+  border: 1px solid #000;
+  padding: 20px;
+  padding-top: 75px;
+  color: white;
+}
+
+
+.top1 img {
+  width: 45%;
+  height: 45%;
+  margin-right: 20px;
+  background-color: #ccc;
+}
+
+
+.top2 h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-right: 30px;
+}
+
+.top2 p {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.top2 a.more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.top2 table {
+  border-collapse: collapse;
+  background-color: transparent; 
+  border: none; 
+}
+
+.top2 td, .top2 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.2;
+  border: none; 
+  background-color: transparent; 
+}
+
+
+/* モバイル対応のスタイル */
+@media screen and (max-width: 768px) {
+  .ranking h2 {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 1.5em;
+  }
+
+  .top1, .top2 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .top1 img, .top2 img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+  }
+
+  .top1 h3, .top2 h3 {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+  }
+
+  .top1 p, .top2 p {
+    font-size: 1em;
+  }
+
+  .top1 a.more, .top2 a.more {
+    margin-top: 5px;
+  }
+
+  hr.mid {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .top1 table, .top2 table {
+    width: 100%;
+  }
+
+  .top1 td, .top1 th, .top2 td, .top2 th {
+    font-size: 0.9em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+
+/* genres */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.genre {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.genre h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.genre p {
+  font-size: 16px;
+  color: #333;
+}
+
+.genre img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .genre {
+      width: 80%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .genre {
+      width: 95%;
+      padding: 10px;
+  }
+
+  .genre h2 {
+      font-size: 20px;
+  }
+
+  .genre p {
+      font-size: 14px;
+  }
+}
